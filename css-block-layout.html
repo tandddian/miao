@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0px;
+        }
+        div.header {
+            background-color: black;
+        }
+
+        header {
+            width: 600px;
+            margin: auto;
+            color: white;
+        }
+
+        div.main {
+            width: 600px;
+            margin: 15px auto 0px auto;
+        }
+
+        div.inline-block {
+            width: 630px;
+            /* margin-top: 10px; */
+            font-size: 0px;
+        }
+
+        span {
+            font-size: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 3px solid black;
+            background-color: pink;
+            width: 180px;
+            height: 40px;
+            display: inline-block;
+
+            margin-top: 15px;
+            margin-right: 30px;
+
+        }
+
+        body > div:nth-child(3) {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            
+        }
+
+        div.list ul {
+            /* box-sizing: border-box; */
+            padding: 0px;
+            /* width: 680px; */
+            margin-top: 15px;
+            /* margin-right: auto;
+            margin-left: auto; */
+            list-style: none;
+            overflow: hidden;
+        }
+
+        div.list li {
+            box-sizing: border-box;
+            border-bottom: 1px dotted black;
+            width: 600px;
+            margin-bottom: -1px;
+            
+
+        }
+
+        div.list {
+            width: 600px;
+            box-sizing: border-box;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        div.copy {
+            text-align: center;
+            background: violet;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        
+        div.block {
+            width: 600px;
+            box-sizing: border-box;
+            margin: auto;
+            /* overflow: hidden; */
+        }
+
+        div.block div {
+            box-sizing: border-box;
+            width: 180px;
+            background-color: pink;
+            border: 3px solid black;
+            height: 40px;
+            text-align: center;
+            margin-top: 15px;
+            margin-right: 30px;
+            
+            
+        }
+
+        div.block div:nth-child(3n+2) {
+            margin-left: 210px;
+            margin-top: -40px;
+            
+        }
+
+        div.block div:nth-child(3n+3) {
+            margin-left: 420px;
+            margin-top: -40px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果
+        </header>
+    </div>
+
+    <div class="main">
+        页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    </div>
+    
+    <div>
+        <div class="inline-block">
+            <span>Lorem.</span> <span>Sint.</span> <span>Similique.</span> 
+            <span>Soluta.</span> <span>Fugiat.</span> <span>A.</span>
+            <span>Placeat.</span><span>Maxime?</span><span>Beatae.</span>
+            <span>Placeat.</span><span>Maxime?</span><span>Beatae.</span>
+        </div>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li>Lorem.</li>
+            <li>Cum!</li>
+            <li>Quasi!</li>
+            <li>Iure!</li>
+            <li>Optio!</li>
+        </ul>
+    </div>
+
+    <div class="copy">
+        ©版权所有 <br>
+        本页所有布局均使用行内元素
+    </div>
+
+    <div class="block">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+
+    </div>
+    <div class="copy">
+        ©版权所有 <br>
+        本页所有布局均使用块元素
+    </div>
+</body>
+
+</html>
