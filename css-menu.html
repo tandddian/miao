@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, 0.08);
+            box-shadow: inset 0 0 1px red;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0px;
+        }
+
+        body>ul {
+            position: relative;
+
+        }
+
+        ul.menu li {
+            display: inline-block;
+            position: relative;
+        }
+
+        ul.menu ul {
+            position: absolute;
+            display: none;
+            white-space: norap;
+            left: 0;
+            top: 100%;
+
+        }
+
+        ul.menu ul ul {
+            top: 0;
+            left: 100%;
+        }
+
+        li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+            file
+            <ul>
+                <li>
+                    xx1
+                    <ul>
+                        <li>
+                            xxdffdd1
+                            <ul>
+                                <li>xx1</li>
+                                <li>xx2</li>
+                            </ul>
+                        </li>
+                        <li>xx2</li>
+                    </ul>
+                </li>
+                <li>
+                    xx2
+                    <ul>
+                        <li>xx1</li>
+                        <li>xx2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            edit
+
+        </li>
+        <li>selection</li>
+        <li>view</li>
+        <li>go</li>
+        <li>run</li>
+        <li>...</li>
+    </ul>
+
+
+</body>
+
+</html>
