@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @keyframes skate {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 100%;
+            }
+        }
+
+
+        .slider {
+            position: relative;
+            width: 1226px;
+            height: 460px;
+        }
+
+        .slider img {
+            opacity: 0;
+            position: absolute;
+            /* 利用缓动让原有的图片平缓的消失 */
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+
+        input[id^="opt"] {
+            display: none;
+        }
+
+        #opt1:checked~img:nth-of-type(1),
+        #opt2:checked~img:nth-of-type(2),
+        #opt3:checked~img:nth-of-type(3),
+        #opt4:checked~img:nth-of-type(4),
+        #opt5:checked~img:nth-of-type(5),
+        #opt6:checked~img:nth-of-type(6) {
+            opacity: 1;
+            /* 利用动画让让图片出现 */
+            animation: skate ease-in 1s;
+
+        }
+
+        .label-radio {
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100px;
+            height: 20px;
+
+            & label[for^="opt"] {
+                cursor: pointer;
+                box-sizing: border-box;
+                width: 10px;
+                height: 10px;
+                z-index: 10;
+                background-color: rgba(26, 30, 30, 0.4);
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+
+                &:hover {
+                    /* 只设置content-box的背景颜色 */
+                    background-clip: content-box;
+                    background-color: rgba(240, 240, 240, 0.8);
+                }
+
+            }
+        }
+
+        input[id^="opt1"]:checked~.label-radio label[for^="opt1"],
+        input[id^="opt2"]:checked~.label-radio label[for^="opt2"],
+        input[id^="opt3"]:checked~.label-radio label[for^="opt3"],
+        input[id^="opt4"]:checked~.label-radio label[for^="opt4"],
+        input[id^="opt5"]:checked~.label-radio label[for^="opt5"],
+        input[id^="opt6"]:checked~.label-radio label[for^="opt6"] {
+            background-clip: content-box;
+            border: 2px solid rgba(31, 30, 30, 0.473);
+            background-color: rgba(240, 240, 240, 0.8);
+        }
+
+
+        /*.arrow {
+            position: absolute;
+            z-index: 1000000;
+            background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            height: 69px;
+            width: 166px;
+            top: 50%;
+            transform: translateY(-50%);
+            .arrow-l-black {
+                box-sizing: border-box;
+                position: absolute;
+                width: 41px;
+                height: 70px;
+                
+            }
+
+            .arrow-r-black {
+                box-sizing: border-box;
+                position: absolute;
+                width: 41px;
+                height: 70px;
+                left: 42px;
+
+            }
+
+            .arrow-l-white {
+                box-sizing: border-box;
+                position: absolute;
+                width: 41px;
+                height: 70px;
+                left: calc(42px * 2);
+
+            }
+
+            .arrow-r-white {
+                box-sizing: border-box;
+                position: absolute;
+                width: 41px;
+                height: 70px;
+                left: calc(42px * 3);
+
+            } */
+
+        .arrow-l-black {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 41px;
+            height: 70px;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+            
+            .arrow {
+                height: 69px;
+                width: 166px;   
+                
+                background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+
+            }
+        }
+
+        .arrow-l-white {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 41px;
+            height: 70px;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 10;
+            .arrow {
+                position: absolute;
+                left: calc(-200% - 1px);
+                height: 69px;
+                width: 166px;   
+                xz-index: 1000;
+                background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            }
+        }
+
+        .arrow-l-white:hover~.arrow-l-black {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .arrow-r-black {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+            width: 41px;
+            height: 70px;
+            z-index: 1;
+            opacity: 0;
+            overflow: hidden;
+
+            .arrow {
+                position: absolute;
+                left: calc(-100% - 1px);
+                height: 69px;
+                width: 166px;   
+                background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            }
+        }
+
+        .arrow-r-white {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+            width: 41px;
+            height: 70px;
+            cursor: pointer;
+
+            overflow: hidden;
+            z-index: 10;
+
+            .arrow {
+                position: absolute;
+                left: calc(-300% - 1px);
+                height: 69px;
+                width: 166px;   
+
+                background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            }
+        }
+
+        .arrow-r-white:hover~.arrow-r-black {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        #opt1:checked ~ .arrow-r-white { 
+            for: opt2; 
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+    <div class="slider">
+        <input type="radio" name="slider" id="opt1" checked>
+        <input type="radio" name="slider" id="opt2">
+        <input type="radio" name="slider" id="opt3">
+        <input type="radio" name="slider" id="opt4">
+        <input type="radio" name="slider" id="opt5">
+        <input type="radio" name="slider" id="opt6">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2e389157059c44d9352b42e04407cbb7.jpg?w=2452&h=920"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e47bc402508c005ec3c0f4c13bb8b705.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6807986a20a839b7b971274c705bbacf.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5d2e4ce0cc22c7d87981bac22d64e44d.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7f5a5fc15d61ee9f1f423f49f08e61d9.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/57b08b308c5eacf0655fd5da8d5a965f.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+
+        <div class="label-radio">
+            <label for="opt1"></label>
+            <label for="opt2"></label>
+            <label for="opt3"></label>
+            <label for="opt4"></label>
+            <label for="opt5"></label>
+            <label for="opt6"></label>
+
+        </div>
+
+        <!-- <div class="arrow">
+            <div class="arrow-l-black"> </div>
+            <div class="arrow-r-black"> </div>
+            <div class="arrow-l-white"> </div>
+            <div class="arrow-r-white"> </div>
+        </div> -->
+
+        <div class="arrow-l-white">
+            <div class="arrow"></div>
+        </div>
+
+        <div class="arrow-l-black">
+            <div class="arrow"></div>
+        </div>
+
+        <div class="arrow-r-white">
+            <div class="arrow"></div>
+        </div>
+
+        <div class="arrow-r-black">
+            <div class="arrow"></div>
+        </div>
+
+        
+    </div>
+
+
+</body>
