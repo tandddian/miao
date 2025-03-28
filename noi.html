@@ -1,0 +1,152 @@
+<script type="xxx" id="ch0103/01">
+    var A = +prompt('A:')
+    var B = +prompt('B:')
+    A % 2 - 1 > 0 ||  B % 2 - 1 > 0 ? alert('wrong') : console.log(A + B)
+</script>
+
+<script type="xxx" id="ch0103/02">
+    var a = +prompt('整数-10000<a<10000：')
+    var b = +prompt('整数-10000<b<10000：')
+    var c = +prompt('整数-10000<c<10000：')
+    a % 2 - 1 > 0 ||  b % 2 - 1 > 0 ||  c % 2 - 1 > 0 || a <= -10000 || a >= 10000 || b <= -10000 || b >= 10000 || c <= -10000 || c >= 10000 ? alert('wrong') : console.log(a + b + c)
+
+</script>
+
+<script type="xxx" id="ch0103/03">
+    var a = +prompt('整数-10000<a<10000：')
+    var b = +prompt('整数-10000<b<10000：')
+    var c = +prompt('整数-10000<c<10000：')
+
+    a % 2 - 1 > 0 ||  b % 2 - 1 > 0 ||  c % 2 - 1 > 0 || a <= -10000 || a >= 10000 || b <= -10000 || b >= 10000 || c <= -10000 || c >= 10000 ? alert('wrong') : console.log((a + b) / c)
+</script>
+
+<script  type="xxx" id="ch0103/04">
+    var a = +prompt('被除数：')
+    var b = +prompt('除数：')
+    a % 2 - 1 > 0 ||  b % 2 - 1 > 0 ? alert('wrong') : console.log(((a - a % b) / b) , a % b)
+
+</script>
+
+<script type="xxx" id="ch0103/05">
+    var a = +prompt('被除数：')
+    var b = +prompt('除数：')
+    a % 2 - 1 > 0 ||  b % 2 - 1 > 0 ? alert('wrong') : console.log((a / b).toFixed(9))
+</script>
+
+<script type="xxx" id="ch0103/06">
+    var a = +prompt('确诊数：')
+    var b = +prompt('死亡数：')
+    a % 2 - 1 > 0 ||  b % 2 - 1 > 0 ? alert('wrong') : console.log((b / a * 100).toFixed(3) + '%')
+</script>
+
+<script type="xxx" id="ch0103/07">
+    var x = +prompt('x：')
+    var a = +prompt('a：')
+    var b = +prompt('b：')
+    var c = +prompt('c：')
+    var d = +prompt('d：')
+    
+    console.log((a * (x ** 3) + b * (x ** 2) + c * x + d).toFixed(9))
+</script>
+
+<script type="xxx" id="ch0103/08">
+    var F = +prompt('F>-459.67：')
+    console.log((5 * (F - 32) / 9 ).toFixed(5))
+</script>
+
+<script type="xxx" id="ch0103/09">
+    var r = +prompt('半径 r：')
+    console.log((2 * r).toFixed(4))
+    console.log((2 * 3.1415926 * r).toFixed(4))
+    console.log((r * 3.1415926 * r).toFixed(4))
+</script>
+
+<script type="xxx" id="ch0103/010">
+    var r1 = +prompt('r1：')
+    var r2 = +prompt('r2：')
+    console.log((1 / (1 / r1 + 1 / r2)).toFixed(2))
+    
+</script>
+
+<script type="xxx" id="ch0103/011">
+    var a = +prompt('a：')
+    var b = +prompt('b：')
+    console.log((a % b).toFixed(4))
+</script>
+
+<script type="xxx" id="ch0103/012">
+    var r = +prompt('半径 r：')
+    console.log((4 / 3 * 3.14 * r ** 3).toFixed(2))
+</script>
+
+<script type="xxx" id="ch0103/013">
+    var n = +prompt('输入三位数：')
+    var m = n % 10 * 100 + (n % 100 - n % 10) + (n - n % 100) / 100
+    console.log(m)
+    //console.log(n % 10 , (n % 100 - n % 10) / 10 , (n - n % 100) / 100)
+</script>
+
+<script  type="xxx" id="ch0103/014">
+    var Pi = 3.14159
+    var h = +prompt('h(cm):')
+    var r = +prompt('r(cm):')
+    var V = Pi * r ** 2 * h
+    console.log((20000 - 20000 % V) / V + 1)
+</script>
+
+<script type="xxx" id="ch0103/015">
+    var n = +prompt('n:')
+    var x = +prompt('x:')
+    var y = +prompt('y <= x * n:')
+    y <= n * x ? console.log(n - ((y - y % x) / x + 1)) : alert('非法y')
+    
+</script>
+
+<script type="xxx" id="ch0103/016">
+        var x1 = +prompt('x1:')
+        var y1 = +prompt('y1:')
+        var x2 = +prompt('x2:')
+        var y2 = +prompt('y2:')
+        x1 > 10000 || y1 > 10000 || x2 > 10000 || y2 > 10000 ? alert('非法输入') : console.log((((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5).toFixed(3)) 
+
+</script>
+
+<script type="xxx" id="ch0103/017">
+    var x1 = +prompt('x1:')
+    var y1 = +prompt('y1:')
+
+    var x2 = +prompt('x2:')
+    var y2 = +prompt('y2:')
+    
+    var x3 = +prompt('x3:')
+    var y3 = +prompt('y3:')
+
+    var a = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+    var b = ((x1 - x3) ** 2 + (y1 - y3) ** 2) ** 0.5
+    var c = ((x2 - x3) ** 2 + (y2 - y3) ** 2) ** 0.5
+
+    var p = (a + b + c) / 2
+
+    console.log(((p * (p - a) * (p - b) * (p - c)) ** 0.5).toFixed(2))
+</script>
+
+<script type="xxx" id="ch0103/018">
+    var a1 = +prompt('第一项a1:')
+    var a2 = +prompt('第二项a2:')
+    var n = +prompt('n:')
+    var p = a2 - a1
+    a1 < -100 || a1 > 100 || a1 < -100 || a1 > 100 || n > 1000 || n < 0 ? alert('错误'): console.log(a1 + (n - 1) * p)
+
+
+</script>
+
+<script  type="xxx" id="ch0103/019">
+    var A = +prompt('整数A:')
+    var B = +prompt('整数B:')
+    A % 2 - 1 > 0 ||  B % 2 - 1 > 0 ? alert('wrong') : console.log(A * B)
+</script>
+
+<script type="xxx" id="ch0103/020">
+    var n = +prompt('整数n:')
+    n % 2 - 1 > 0 ||  n > 31 || n < 0 ? alert('wrong') : console.log(2 ** n)
+</script>
