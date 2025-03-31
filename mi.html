@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div class="w-full h-[40px] bg-[rgb(51,51,51)]">
+    <div class="w-full h-[40px] bg-[rgb(51,51,51)] overflow">
         <div class="w-[1228px] h-[40px] relative  m-auto text-[12px]">
             <div class=" absolute flex-col text-[rgb(176,176,176)] top-[50%]  translate-y-[-50%] left-0 my-auto">
                 <a href="#">
@@ -88,7 +88,7 @@
 
             </div>
 
-            <div class=" absolute flex-col text-[rgb(176,176,176)] right-0  top-[50%] translate-y-[-50%]  ">
+            <div class=" absolute flex-col text-[rgb(176,176,176)] right-[128px]  top-[50%] translate-y-[-50%]  ">
                 <a href="#">
                     <span> 登录 </span>
                 </a>
@@ -103,16 +103,25 @@
                     <span> 消息通知 </span>
                 </a>
 
-                <div class="text-[rgb(176,176,176)] inline-block ml-[10px] leading-[10px] ">
-                    <a href="#" class="iconfont iconfont-cart ">购物车</a>
-                </div>
+                
             </div>
 
-            
+            <div class="group text-[rgb(176,176,176)] inline-block  w-[118px] h-[40px] leading-[10px] right-0 absolute bg-[rgba(66,66,66,1)]">
+                <span class="group-hover:text-amber-500 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[70px] flex justify-center items-center">
+                    <a href="" class="iconfont iconfont-cart"></a>
+                    <a href="#" >购物车</a>
+                </span>
+                <span class="transition-[height] duration-150 shadow-md overflow-hidden absolute h-0 group-hover:h-[100px] w-[317px] bg-white right-0 top-[100%] text-black flex justify-center items-center">
+                    <span class="">购物车中还没有商品，赶紧选购吧！</span>
+                </span>
+            </div>
             
         </div>
     </div>
 
+    <div class="h-100 w-[1228px]">
+
+    </div>
 </body>
 
 </html>
