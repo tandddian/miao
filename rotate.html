@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, 0.08);
+            box-shadow: inset 0 0 1px red;
+        }
+
+        @keyframes rotate1{
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate2{
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body > div {
+            height: 10px;
+            width: 50%;
+            position: reletive;
+            transition: 10s;
+            animation: rotate1 infinite 10s linear;
+        }
+
+
+        div img {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            animation: rotate2 infinite 10s linear;
+        }
+
+        body > img {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            animation: rotate1 infinite 10s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/250px-Smiley.svg.png" alt="">
+        </span>
+    </div>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/250px-Smiley.svg.png" alt="">
+
+
+</body>
+
+</html>

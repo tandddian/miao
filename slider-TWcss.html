@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        @keyframes sktate {
+            from {
+                opacity: 0; 
+            }
+
+            to {
+                opacity: 100%; 
+            }
+        }
+
+        #opt1:checked ~ img:nth-child(1) {
+            animation: sktate linear 1 1.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="relative w-[1226px] h-[460px]">
+        <input type="radio" name="slider" id="opt1" class="peer/opt1">
+        <input type="radio" name="slider" id="opt2" class="peer/opt2">
+        <input type="radio" name="slider" id="opt3" class="peer/opt3">
+        <input type="radio" name="slider" id="opt4" class="peer/opt4">
+        <input type="radio" name="slider" id="opt5" class="peer/opt5">
+        <input type="radio" name="slider" id="opt6" class="peer/opt6">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2e389157059c44d9352b42e04407cbb7.jpg?w=2452&h=920"
+            alt="无" class=" block absolute opacity-[100%] peer-checked/opt1:animate-sktate">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e47bc402508c005ec3c0f4c13bb8b705.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无" class=" block absolute opacity-0 peer-checked/opt2:z-[100]">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6807986a20a839b7b971274c705bbacf.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无" class=" block absolute opacity-0 peer-checked/opt3:z-[100]">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5d2e4ce0cc22c7d87981bac22d64e44d.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无" class=" block absolute opacity-0 peer-checked/opt4:z-[100]">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7f5a5fc15d61ee9f1f423f49f08e61d9.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无" class=" block absolute  opacity-0 peer-checked/opt5:z-[100]">
+
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/57b08b308c5eacf0655fd5da8d5a965f.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无" class=" block absolute opacity-0 peer-checked/opt6:z-[100]">
+    </div>
+
+</body>

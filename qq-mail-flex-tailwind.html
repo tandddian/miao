@@ -5,64 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>JS Bin</title>
-    <style>
-        * {
-            background-color: rgba(0, 0, 0, 0.08);
-            box-shadow: inset 0 0 1px red;
-        }
-    /* 
-    不能写为100%，因为html没有定高，除非html,body 。
-    html,body {
-                margin: 0;
-                height: 100%;
-            }
-    此时html就为第一屏高度
-    */
-        html body {
-            margin: 0;
-            height: 100vh;
-        }
-
-        body {
-            display: flex;
-            flex-flow: column;
-            overflow: auto;
-        }
-
-
-        header {
-            background-color: #22b97d;
-            height: 100px;
-            flex-shrink: 0;
-            overflow: auto;
-        }
-
-        div {
-
-            display: flex;
-            overflow: auto;
-            flex-grow: 1;
-        }
-
-        aside {
-            background-color: rgb(192, 253, 255);
-            width: 200px;
-            overflow: auto;
-            flex-shrink: 0;
-        }
-
-        main {
-            background-color: rgb(77, 162, 165);
-
-            overflow: auto;
-            flex-grow: 1;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       
 </head>
 
-<body>
+<body class="h-screen flex flex-col overflow-auto">
 
-    <header>
+    <header class="bg-pink-300 h-32 flex shrink-0 overflow-auto">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex modi aperiam incidunt assumenda culpa, consequuntur
         illo nam nulla nihil repellat doloribus voluptates magnam iusto amet! Tempora a distinctio reiciendis expedita
         fugiat repellendus neque illo tenetur quam ut numquam officiis, cupiditate atque similique debitis, totam.
@@ -70,8 +19,8 @@
         ut. Dolorum nulla distinctio provident, quidem et ex qui commodi rem vitae, repellendus. Commodi dignissimos
         unde labore doloremque cum atque provident iste, earum officiis at totam libero corporis, est laboriosam quam,
         quasi obcaecati reiciendis soluta. Veritatis officiis vel, quam minima. Quasi, dignissimos.</header>
-    <div>
-        <aside>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque quisquam quibusdam voluptate
+    <div class="flex overflow-auto grow-1">
+        <aside class="bg-green-300 w-2xs overflow-auto shrink-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem atque quisquam quibusdam voluptate
             doloremque eveniet repellat, perferendis illo sint autem nesciunt sunt quos quaerat magnam laudantium nisi
             inventore dolores incidunt, ducimus quis neque modi. Sequi dicta, deserunt nobis laborum sed. Earum maiores
             dolorem officia enim, esse explicabo placeat, odio amet. Recusandae distinctio voluptate doloremque dolor
@@ -79,7 +28,7 @@
             illo sint eum magni soluta repellat vel ipsum ad. Ad voluptatibus expedita optio nemo. Sed dolorem magni
             perferendis iusto, modi nulla cumque, deleniti consequuntur cupiditate dolore minima dolorum commodi.
         </aside>
-        <main>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptates eaque expedita, neque
+        <main class="bg-sky-300 overflow-auto grow-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptates eaque expedita, neque
             perspiciatis obcaecati labore ex! Officiis natus laboriosam vitae aliquam, voluptates repellendus obcaecati
             vero, esse facere ipsam mollitia architecto iste nam inventore. Eius fugiat ipsam, corrupti officia pariatur
             consectetur repellendus molestias odio expedita nisi libero, delectus eligendi enim molestiae rerum ex

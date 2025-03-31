@@ -5,55 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>JS Bin</title>
-    <style>
-        
-        html,
-        body {
-            margin: 0;
-            height: 100%;
-
-        }
-
-        div {
-            display: flex;
-            overflow: auto;
-
-        }
-
-        header,
-        h1 {
-            margin: 0px;
-        }
-
-        header {
-            height: 120px;
-            border: 1px solid black;
-            overflow: auto;
-        }
-
-
-        aside {
-            flex: none;
-            height: 100vh;
-            width: 300px;
-            background-color: #2aaf3a;
-            border: 1px solid black;
-            overflow: auto;
-        }
-
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-flow: column;
-            overflow: auto;
-            background-color: #2a9baf;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-    <div>
-        <aside>
+    <div class="flex overflow-auto">
+        <aside class="flex h-screen w-2xs bg-green-300 border border-black overflow-auto shrink-0">
             
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis recusandae non iusto molestiae
             officia nobis nostrum dolore quidem tenetur voluptatibus, magni laborum nemo incidunt ratione dicta, eius
@@ -86,9 +43,9 @@
             ipsum atque iure praesentium corporis eius ab hic necessitatibus cum ea, cupiditate similique dignissimos?
             Labore, reprehenderit.</aside>
             
-        <main>
-            <header>
-                <h1>fantasy</h1>
+        <main class="flex grow flex-col overflow-auto bg-sky-300">
+            <header class="h-32 border border-black border-solid overflow-auto">
+                <h1 class="m-1 text-6xl font-bold">fantasy</h1>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ullam cupiditate et eveniet! Cum,
                 blanditiis ab corrupti dignissimos necessitatibus placeat ullam temporibus quis ipsa dicta assumenda
                 delectus quisquam ex beatae facere rem amet autem sed labore doloribus est reprehenderit soluta deleniti
@@ -105,7 +62,7 @@
                 saepe debitis nisi.
             </div>
         </main>
-        <aside>
+        <aside class="flex h-screen w-2xs bg-green-300 border border-black overflow-auto shrink-0">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis recusandae non iusto molestiae
             officia nobis nostrum dolore quidem tenetur voluptatibus, magni laborum nemo incidunt ratione dicta, eius
             dignissimos saepe odit consequatur accusantium sint facere. Nam eaque quibusdam necessitatibus iusto neque
@@ -135,8 +92,10 @@
             ipsam? Repellendus consequatur distinctio voluptatem blanditiis, quidem atque autem. Corrupti qui ut
             expedita quia libero dolor soluta, facere quasi quidem! Maiores totam, ipsam illo accusantium, debitis quia
             ipsum atque iure praesentium corporis eius ab hic necessitatibus cum ea, cupiditate similique dignissimos?
-            Labore, reprehenderit.</aside>
-        <aside>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis recusandae non iusto molestiae
+            Labore, reprehenderit.
+        </aside>
+
+        <aside class="flex h-screen w-2xs bg-green-300 border border-black overflow-auto shrink-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis recusandae non iusto molestiae
             officia nobis nostrum dolore quidem tenetur voluptatibus, magni laborum nemo incidunt ratione dicta, eius
             dignissimos saepe odit consequatur accusantium sint facere. Nam eaque quibusdam necessitatibus iusto neque
             in alias et facere nihil id iure adipisci rem aliquam nostrum soluta sit dolorem ratione fuga quidem,

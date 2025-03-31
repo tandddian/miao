@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        div.arix {
+
+            &,
+            div.cube {
+                transform-style: preserve-3d;
+            }
+
+            box-sizing: border-box;
+            height: 500px;
+            width: 500px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.08);
+            left: 25%;
+            top: 25%;
+            transition: 10s;
+            xtransform: perspective(500px) rotateX(210deg) rotateZ(210deg);
+
+            &:hover {
+                transform: perspective(500px) rotateX(750deg) rotateZ(750deg);
+            }
+        }
+
+        div.cube {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            xtransform: translateX(-50%) translateY(-50%) translateZ(100px);
+        }
+
+        span.x-arix {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+        }
+
+        span.x-arix::before {
+            content: '>';
+            font-size: 30px;
+            color: red;
+            position: absolute;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+        }
+
+        span.x-arix::after {
+            content: 'x R';
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 99%;
+
+        }
+
+        span.y-arix {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%) rotateZ(90deg);
+        }
+
+        span.y-arix::before {
+            content: '<';
+            font-size: 30px;
+            color: red;
+            position: absolute;
+            left: 0%;
+            transform: translateY(-50%)
+        }
+
+        span.y-arix::after {
+            content: 'y R';
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            transform: rotateZ(270deg);
+
+        }
+
+        span.z-arix {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%) rotateY(-90deg);
+
+        }
+
+        span.z-arix::before {
+            content: '>';
+            font-size: 30px;
+            color: red;
+            position: absolute;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+        }
+
+        span.z-arix::after {
+            content: 'z R';
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            left: 99%;
+            transform: rotateY(180deg);
+
+        }
+
+        [class^="o"] {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+            background: rgba(48, 175, 207, 0.377);
+        }
+
+        span.o1 {
+
+            transform: rotateX(90deg) translateZ(50px) rotateZ(180deg);
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        span.o2 {
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        span.o3 {
+            transform: rotateY(90deg) translateZ(50px) rotateZ(180deg);
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        span.o4 {
+            transform: rotateY(-90deg) translateZ(50px);
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        span.o5 {
+            transform: rotateZ(90deg) translateZ(50px);
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        span.o6 {
+            transform: rotatez(-90deg) translateZ(50px) rotateZ(180deg);
+            background:
+                linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+
+
+        div.clock >span:nth-child(1) {
+            --index: 1;
+        }
+
+        div.clock >span:nth-child(2) {
+            --index: 2;
+        }
+
+        div.clock >span:nth-child(3) {
+            --index: 3;
+        }
+
+        div.clock >span:nth-child(4) {
+            --index: 4;
+        }
+
+        div.clock >span:nth-child(5) {
+            --index: 5;
+        }
+
+        div.clock > span:nth-child(6) {
+            --index: 6;
+        }
+
+        div.clock > span:nth-child(7) {
+            --index: 7;
+        }
+
+        div.clock > span:nth-child(8) {
+            --index: 8;
+        }
+
+        div.clock > span:nth-child(9) {
+            --index: 9;
+        }
+
+        div.clock > span:nth-child(10) {
+            --index: 10;
+        }
+
+        div.clock > span:nth-child(11) {
+            --index: 11;
+
+        }
+
+        div.clock > span:nth-child(12) {
+            --index: 12;
+        }
+
+        div.clock {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        div.clock > span {
+            position: absolute;
+            transform: rotateZ(calc(30deg * var(--index))) translateY(-200px);
+        }
+
+        div.clock > span > span {
+            position: absolute;
+            transform: rotateZ(calc(-30deg * var(--index))) ;
+        }
+
+        div.clock span.hour {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 5px;
+            width: 100px;
+            background-color: black;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform-origin: left;
+            transform: rotateZ(-90deg);
+            
+
+        }
+
+        div.clock span.hour::before {
+            content: '>';
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+            
+        }
+
+        div.clock span.min {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 2px;
+            width: 150px;
+            background-color: black;
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform-origin: left;
+            transform: rotateZ(-90deg);
+            
+
+        }
+
+        div.clock span.min::before {
+            content: '>';
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            position: absolute;
+            left: 100%;
+            transform: translateY(-50%) translateX(-100%);
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="arix">
+        <span class="x-arix"></span>
+        <span class="y-arix"></span>
+        <span class="z-arix"></span>
+
+        <div class="cube">
+            <span class="o1">01</span><span class="o2">02</span><span class="o3">03</span><span
+                class="o4">04</span><span class="o5">05</span><span class="o6">06</span>
+        </div>
+
+        <div class="clock">
+            
+            <span class="time1"><span>01</span></span><span class="time2"><span>02</span></span><span
+                class="time3"><span>03</span></span><span class="time4"><span>04</span></span><span
+                class="time5"><span>05</span></span><span class="time6"><span>06</span></span><span
+                class="time7"><span>07</span></span><span class="time8"><span>08</span></span><span
+                class="time9"><span>09</span></span><span class="time10"><span>10</span></span><span
+                class="time11"><span>11</span></span><span class="time12"><span>12</span></span>
+                <span class="hour"></span>
+                <span class="min"></span>
+        </div>
+    </div>
+</body>
+
+</html>
