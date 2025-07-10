@@ -1,0 +1,165 @@
+var tandddian = {
+    compact: function (array) {
+        return array.filter(element => {
+            return Boolean(element)
+        })
+    },
+    chunk: function (array, size = 1) {
+        let patitionSize = Math.ceil(array.length / size)
+        let result = []
+        let j = 0;
+        while (patitionSize) {
+            let tmp = []
+            let s = patitionSize > 1 || array.length % size == 0 ? size : array.length % size 
+            while (s) {
+                tmp.push(array[j++])
+                s--
+            }
+            result.push(tmp)
+            patitionSize--
+        }
+        return result 
+    },
+    fill: function (array, value, start = 0, end = array.length) {
+        let result = []
+        return result = Array.from(array, (currentValue, index) => {
+            if (index >= start && index < end ) {
+                currentValue = value
+            } 
+            return currentValue ? currentValue : ""
+        })
+    },
+    drop: function (array, n = 1) {
+        let result = []
+        if (n >= array.length) {
+            return result;
+        } else {
+            return array.slice(n);
+        }
+    },
+    findIndex: function (array, predicate,fromIndex = 0) {
+        if (typeof predicate === 'function') { 
+            for (let i = fromIndex; i < array.length; i++) {
+                if (predicate(array[i])) {
+                    return i;
+                }
+            }
+        } else if (Array.isArray(predicate)) {
+            const [key, value] = predicate;
+            for (let i = fromIndex; i < array.length; i++) {
+                if (array[i][key] === value) {
+                    return i;
+                }
+            }
+        } else if (typeof predicate === 'object') {
+            for (let i = fromIndex; i < array.length; i++) {
+            let match = true;
+            for (const key in predicate) {
+                if (array[i][key] !== predicate[key]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) return i;
+            }
+        } else if (typeof predicate === 'string') {
+            for (let i = fromIndex; i < array.length; i++) {
+                if (array[i][predicate]) {
+                    return i;
+                }
+            }
+        }
+            return -1; 
+    },
+    findLastIndex: function (array, predicate, fromIndex=array.length-1) {
+        if (typeof predicate === 'function') { 
+            for (let i = fromIndex; i >= 0; i--) {
+                if (predicate(array[i])) {
+                    return i;
+                }
+            }
+        } else if (Array.isArray(predicate)) {
+            const [key, value] = predicate;
+            for (let i = fromIndex; i >= 0; i--) {
+                if (array[i][key] === value) {
+                    return i;
+                }
+            }
+        } else if (typeof predicate === 'object') {
+            for (let i = fromIndex; i >= 0; i--) {
+            let match = true;
+            for (const key in predicate) {
+                if (array[i][key] !== predicate[key]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) return i;
+            }
+        } else if (typeof predicate === 'string') {
+            for (let i = fromIndex; i >= 0; i--) {
+                if (array[i][predicate]) {
+                    return i;
+                }
+            }
+        }
+            return -1; 
+    },
+    flatten: function (array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++) {
+            if(Array.isArray(array[i])) {
+                for (let j = 0; j < array[i].length; j++) {
+                    result.push(array[i][j])
+                }
+            } else {
+                result.push(array[i])
+            }
+        }
+        return result
+    },
+    flattenDeep: function (array) {
+        let result = [];
+        function flattenDeepTmp(array1) {
+            for (let i = 0; i < array1.length; i++) {
+                if(Array.isArray(array1[i])) {
+                    flattenDeepTmp(array1[i]);
+                } else {
+                    result.push(array1[i]);
+                }
+            }
+        }
+        flattenDeepTmp(array);
+        return result;
+    },
+    flattenDepth: function (array, depth=1) {
+        let result = [];
+        function flattenDepthTmp(array1, depthTmp) {
+
+            for (let i = 0; i < array1.length; i++) {
+                if(Array.isArray(array1[i]) && depthTmp !== 1) {
+                    flattenDepthTmp(array1[i], --depthTmp);
+                } else {
+                    result.push(array1[i]);
+                }
+            }
+        }
+        //flattenDepthTmp(array, depth);
+        for (let s = 0; s < array.length; s++) {
+            if(Array.isArray(array[s])) {
+                flattenDepthTmp(array[s], depth );
+            } else {
+                result.push(array[s]);
+            }
+        }
+        
+        return result;
+    },
+    fromPairs: function (pairs) {
+        let obj = {};
+        for (let i = 0; i < pairs.length; i++) {
+            obj[pairs[i][0]] = pairs[i][1];
+        }
+        return obj;
+    }
+}
