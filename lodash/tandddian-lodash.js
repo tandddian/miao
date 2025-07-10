@@ -5,7 +5,7 @@ var tandddian = {
         })
     },
     chunk: function (array, size = 1) {
-        let patitionSize = Math.ceil(array.length / size)
+        let patitionSize = Math.ceil(array.length / size);
         let result = []
         let j = 0;
         while (patitionSize) {
@@ -161,5 +161,73 @@ var tandddian = {
             obj[pairs[i][0]] = pairs[i][1];
         }
         return obj;
+    },
+    toPairs: function (object) {
+        let obj = object
+        let result = [];
+        for (let key in obj) {
+            let tmp = [];
+            if (obj.hasOwnProperty(key)){
+                tmp.push(key, obj[key])
+                result.push(tmp);
+            }
+        }
+        return result;
+    },
+    head: function (array) {
+        if(!array.length) {
+            return undefined
+        }
+        return array[0]
+    },
+    indexOf: function (array, value, fromIndex = 0) {
+        let idx = -1
+        for (let i = fromIndex; i < array.length; i++) {
+            if (array[i] === value) {
+                idx = i
+                break
+            } 
+        }
+        return idx
+    },
+    lastIndexOf: function (array, value, fromIndex=array.length-1) {
+        let idx = -1
+        for (let i = fromIndex; i >= 0; i--) {
+            if (array[i] === value) {
+                idx = i
+                break
+            } 
+        }
+        return idx
+    },
+    initial: function (array) {
+        return array.slice(0, array.length-1)
+    },
+    join: function(array, separator = ',') {
+        let str = ''
+        for (let i = 0; i < array.length; i++) {
+            str = str + array[i] + separator
+        }
+        return str.slice(0, str.length - 1)
+    },
+    last: function (array) {
+        return array[array.length - 1]
+    },
+    pull:  function (array, ...values) {
+        for (let j = 0; j < values.length; j++) {
+            
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === values[j]) {
+                    if (i) {
+                        array.splice(i , 1)
+                    } else {
+                        array.shift()
+                    }
+                    i--
+                }
+            }
+        }
+        
     }
+
 }
