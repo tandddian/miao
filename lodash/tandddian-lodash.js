@@ -215,7 +215,7 @@ var tandddian = {
     },
     pull:  function (array, ...values) {
         for (let j = 0; j < values.length; j++) {
-            
+            //values.includes(result[i])
             for (let i = 0; i < array.length; i++) {
                 if (array[i] === values[j]) {
                     if (i) {
@@ -227,7 +227,70 @@ var tandddian = {
                 }
             }
         }
-        
+        return array;
+    },
+    reverse: function (array) {
+        let n = array.length - 1;
+        for (let i = 0; i < array.length / 2; i++) {
+            let tmp = array[n - i];
+            array[n - i] = array[i]
+            array[i] = tmp
+        }
+        return array
+    },
+    every: function (collection, predicate) {
+        let boolTmp = true;
+        if (typeof predicate === 'function') { 
+            return collection.reduce((bool, cur) => predicate(cur) && bool, 1)
+        } else if (Array.isArray(predicate)) {
+            for (let k = 0; k < collection.length; k++) {
+                if (collection[k].hasOwnProperty(predicate[0])) {
+                    boolTmp = boolTmp && (collection[k][predicate[0]] === predicate[1])
+                } else {
+                    return false
+                }
+                return boolTmp
+            }
+        } else if (typeof predicate === 'object') {
+            for (let j = 0; j < collection.length; j++) {
+                boolTmp = boolTmp && (collection[j] === predicate)
+            }
+            return boolTmp
+        } else if (typeof predicate === 'string') {
+            for (let i = 0; i < collection.length; i++) {
+                boolTmp = boolTmp && collection[i][predicate]
+            }
+            return boolTmp
+        }
+        return false; 
+    },
+    some: function (collection, predicate) {
+        //!every (collection, !predicate) 
+        // ruhe实现对函数的取反？
+        let boolTmp = false;
+        if (typeof predicate === 'function') { 
+            return collection.reduce((bool, cur) => predicate(cur) && bool, 1)
+        } else if (Array.isArray(predicate)) {
+            for (let k = 0; k < collection.length; k++) {
+                if (collection[k].hasOwnProperty(predicate[0])) {
+                    boolTmp = boolTmp || (collection[k][predicate[0]] === predicate[1])
+                } else {
+                    return false
+                }
+                return boolTmp
+            }
+        } else if (typeof predicate === 'object') {
+            for (let j = 0; j < collection.length; j++) {
+                boolTmp = boolTmp || (collection[j] === predicate)
+            }
+            return boolTmp
+        } else if (typeof predicate === 'string') {
+            for (let i = 0; i < collection.length; i++) {
+                boolTmp = boolTmp || collection[i][predicate]
+            }
+            return boolTmp
+        }
+        return false; 
     }
 
 }
