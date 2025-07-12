@@ -274,11 +274,9 @@ var tandddian = {
             for (let k = 0; k < collection.length; k++) {
                 if (collection[k].hasOwnProperty(predicate[0])) {
                     boolTmp = boolTmp || (collection[k][predicate[0]] === predicate[1])
-                } else {
-                    return false
                 }
-                return boolTmp
             }
+            return boolTmp
         } else if (typeof predicate === 'object') {
             for (let j = 0; j < collection.length; j++) {
                 boolTmp = boolTmp || (collection[j] === predicate)
@@ -306,6 +304,7 @@ var tandddian = {
         } else {
             for (let item of collection) {
                 if (typeof item === 'string') {
+                    //字符串实例才有 length， 'string' 没有
                     item = new String(item)
                 }
                 if (obj.hasOwnProperty(item[iteratee])) {
@@ -356,7 +355,5 @@ var tandddian = {
         }
         return obj
     }
-
-
 
 }
