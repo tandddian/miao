@@ -269,7 +269,7 @@ var tandddian = {
         // ruhe实现对函数的取反？
         let boolTmp = false;
         if (typeof predicate === 'function') { 
-            return collection.reduce((bool, cur) => predicate(cur) && bool, 1)
+            return collection.reduce((bool, cur) => predicate(cur) || bool, 0)
         } else if (Array.isArray(predicate)) {
             for (let k = 0; k < collection.length; k++) {
                 if (collection[k].hasOwnProperty(predicate[0])) {
@@ -291,6 +291,72 @@ var tandddian = {
             return boolTmp
         }
         return false; 
+    },
+
+    countBy: function(collection, iteratee) {
+        let obj = {}
+        if (typeof iteratee === 'function') {
+            for (let item of collection) {
+                if (obj.hasOwnProperty(iteratee(item))) {
+                    obj[iteratee(item)]++
+                } else {
+                    obj[iteratee(item)] = 1
+                }
+            }
+        } else {
+            for (let item of collection) {
+                if (typeof item === 'string') {
+                    item = new String(item)
+                }
+                if (obj.hasOwnProperty(item[iteratee])) {
+                    obj[item[iteratee]]++
+                } else {
+                    obj[item[iteratee]] = 1
+                }
+            }
+        }
+        return obj
+    },
+
+    groupBy: function(collection, iteratee) {
+        let obj = {}
+        if (typeof iteratee === 'function') {
+            for (let item of collection) {
+                if (obj.hasOwnProperty(iteratee(item))) {
+                    obj[iteratee(item)].push(item)
+                } else {
+                    obj[iteratee(item)] = [item]
+                }
+            }
+        } else {
+            for (let item of collection) {
+                if (typeof item === 'string') {
+                    itemTmp = new String(item)
+                }
+                if (obj.hasOwnProperty(itemTmp[iteratee])) {
+                    obj[itemTmp[iteratee]].push(item)
+                } else {
+                    obj[itemTmp[iteratee]] = [item]
+                }
+            }
+        }
+        return obj
+    },
+
+    keyBy: function(array, iteratee) {
+        let obj = {}
+        if (typeof iteratee === 'function') {
+            for (let item of array) {
+                obj[iteratee(item)] = item
+            }
+        } else {
+            for (let item of array) {
+                obj[item[iteratee]] = item
+            }
+        }
+        return obj
     }
+
+
 
 }
