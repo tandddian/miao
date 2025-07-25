@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <title>MIni-RegEx101</title>
+  <style>
+    input, button {
+      outline: none;
+    }
+
+    #result strong {
+      &:nth-of-type(odd) {
+        background: #2c8feb;
+      }
+      &:nth-of-type(even) {
+        background: #75adc3;
+      }
+    }
+    /*
+    1. 重叠输出
+    2. 同步滚动条 .scrollTop
+    3. 同步文字
+        onkeyup,onkeydown,oninput
+    */
+    #output {
+      > textarea, #result{
+        width: 200px;
+        height: 100px;
+        xoverflow: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="border">REGULAR EXPRESSION</div>
+    <input type="text" id="reInput" class="border" onkeyup="run()">
+    <button class="border bg-red-500" onclick="run()">RUN</button>
+    <div id="tips"></div>
+    <div>FLAGS</div>
+    <label for="flag-g"><input type="checkbox" id="flag-g" checked>g</input></label>
+    <label for="flag-m"><input type="checkbox" id="flag-m">m</input></label>
+    <label for="flag-i"><input type="checkbox" id="flag-i">i</input></label>
+    <label for="flag-y"><input type="checkbox" id="flag-y">y</input></label>
+    <label for="flag-u"><input type="checkbox" id="flag-u">u</input></label>
+    <label for="flag-s"><input type="checkbox" id="flag-s">s</input></label>
+    <label for="flag-d"><input type="checkbox" id="flag-d" checked>d</input></label>
+    <label for="flag-v"><input type="checkbox" id="flag-v">v</input></label>
+    
+    <div class="border">TEST STRING </div>
+    <div id="output">
+      <textarea name="" id="testStringInput" class="border">
+      Lorem ipsum dolor sit 437289 amet consectetur 432 adipisicing elit. 543 Possimus, veniam? Molestias accusamus vel unde labore, sunt repudiandae similique, dolores ullam aspe 11, 32,5lorem orem lorem will hello
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quas assumenda aut ad!
+      </textarea>
+      <div id="result" class="border" id="result">
+    </div>
+  </div>
+
+  </div>
+  
+  <script>
+    run()
+    // 零宽断言
+    // 每个匹配的分组也要有不同的颜色
+    function run() {
+      let reString = reInput.value
+      let flags = getFlags()
+      let re
+      try {
+        //这是一个作用域（scope）问题：在 try 里用 let re 声明的 re 只在那个 {…} 内有效，出了 try 就不认识 re 了，因而报 re is not defined。
+        //let re = new RegExp(reString, getFlags())
+        re = new RegExp(reString, getFlags())
+      } catch (e) {
+        if (e instanceof SyntaxError) {
+          tips.innerHTML = e.message
+          return
+        } else {
+          throw e
+        }
+      }
+      //tips.innerHTML = ''
+      //get testStringInput
+      let testString = testStringInput.value
+      let match
+      let html = ''
+      let lastLastIndex = 0
+      
+      while (match = re.exec(testString)) {
+        
+        html += testString.slice(lastLastIndex, match.index)
+
+        //这一个部分要变颜色
+        html += `<strong>${match[0]}</strong>`
+        //html += '<strong>' + testString.slice(match.index, re.lastIndex) + '</strong>'
+        lastLastIndex = re.lastIndex
+
+        if (match[0].length === 0) {
+          re.lastIndex++
+        }
+
+        if (re.global === false) {
+          break
+        }
+      }
+      html += testString.slice(lastLastIndex)
+      // put html in id=result
+      result.innerHTML = html
+
+    }
+
+    function getFlags() {
+      let flags = ["g", "m", "i","y", "u", "s", "d", "v"]
+      return flags.filter(it => {
+        let element = document.getElementById('flag-' + it)//get situation about checked
+        
+        if (element.checked /*element === checked*/) {
+          return true
+        } else {
+          return false
+        }
+      }).join('')
+    }
+
+    function hightLightMatch() {
+      
+    }
+  </script>
+
+</body>
+</html>
