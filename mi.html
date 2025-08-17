@@ -12,13 +12,193 @@
             src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("woff");
             font-weight: 400
         }
+
         .iconfont {
             font-family: iconfont;
         }
+
         .iconfont-cart::before {
             content: "\E60C";
             font-size: 20px;
             padding-right: 5px;
+        }
+
+        .icon-aw::before {
+            font-family: 'iconfont';
+            content: "\E623";
+        }
+
+        @keyframes skate {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 100%;
+            }
+        }
+
+
+        .slider {
+            position: relative;
+            width: 1226px;
+            height: 460px;
+            margin: 0 auto;
+        }
+
+        .slider img {
+            opacity: 0;
+            position: absolute;
+            /* 利用缓动让原有的图片平缓的消失 */
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+
+        input[id^="opt"] {
+            display: none;
+        }
+
+        #opt1:checked~img:nth-of-type(1),
+        #opt2:checked~img:nth-of-type(2),
+        #opt3:checked~img:nth-of-type(3),
+        #opt4:checked~img:nth-of-type(4),
+        #opt5:checked~img:nth-of-type(5),
+        #opt6:checked~img:nth-of-type(6) {
+            opacity: 1;
+            /* 利用动画让让图片出现 */
+            animation: skate ease-in 1s;
+
+        }
+
+        .label-radio {
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100px;
+            height: 20px;
+
+            & label[for^="opt"] {
+                cursor: pointer;
+                box-sizing: border-box;
+                width: 10px;
+                height: 10px;
+                z-index: 1000;
+                background-color: rgba(26, 30, 30, 0.4);
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+
+                &:hover {
+                    /* 只设置content-box的背景颜色 */
+                    background-clip: content-box;
+                    background-color: rgba(240, 240, 240, 0.8);
+                }
+
+            }
+        }
+
+        input[id^="opt1"]:checked~.label-radio label[for^="opt1"],
+        input[id^="opt2"]:checked~.label-radio label[for^="opt2"],
+        input[id^="opt3"]:checked~.label-radio label[for^="opt3"],
+        input[id^="opt4"]:checked~.label-radio label[for^="opt4"],
+        input[id^="opt5"]:checked~.label-radio label[for^="opt5"],
+        input[id^="opt6"]:checked~.label-radio label[for^="opt6"] {
+            background-clip: content-box;
+            border: 2px solid rgba(31, 30, 30, 0.473);
+            background-color: rgba(240, 240, 240, 0.8);
+        }
+
+        label.image:nth-of-type(1)::before,
+        label.image:nth-of-type(2)::before,
+        label.image:nth-of-type(3)::before,
+        label.image:nth-of-type(4)::before,
+        label.image:nth-of-type(5)::before,
+        label.image:nth-of-type(6)::before {
+            font-family: iconfont;
+            content: '\E629';
+            xcontent: '\E60C';
+
+            display: flex;
+            /* 启用 Flex 布局 */
+            align-items: center;
+            /* 垂直居中 */
+            justify-content: center;
+            /* 水平居中 */
+            font-size: 30px;
+
+            width: 40px;
+            height: 70px;
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            left: 240px;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        input[id^="opt1"]:checked~div.image>label:nth-child(6)::before,
+        input[id^="opt2"]:checked~div.image>label:nth-child(1)::before,
+        input[id^="opt3"]:checked~div.image>label:nth-child(2)::before,
+        input[id^="opt4"]:checked~div.image>label:nth-child(3)::before,
+        input[id^="opt5"]:checked~div.image>label:nth-child(4)::before,
+        input[id^="opt6"]:checked~div.image>label:nth-child(5)::before {
+
+            position: absolute;
+            z-index: 20;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        div.image>label:hover::before {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        label.image:nth-of-type(7)::after,
+        label.image:nth-of-type(8)::after,
+        label.image:nth-of-type(9)::after,
+        label.image:nth-of-type(10)::after,
+        label.image:nth-of-type(11)::after,
+        label.image:nth-of-type(12)::after {
+            font-family: iconfont;
+            content: "\E624";
+
+            display: flex;
+            /* 启用 Flex 布局 */
+            align-items: center;
+            /* 垂直居中 */
+            justify-content: center;
+            /* 水平居中 */
+            font-size: 30px;
+
+            width: 40px;
+            height: 70px;
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        input[id^="opt1"]:checked~div.image>label:nth-child(8)::after,
+        input[id^="opt2"]:checked~div.image>label:nth-child(9)::after,
+        input[id^="opt3"]:checked~div.image>label:nth-child(10)::after,
+        input[id^="opt4"]:checked~div.image>label:nth-child(11)::after,
+        input[id^="opt5"]:checked~div.image>label:nth-child(12)::after,
+        input[id^="opt6"]:checked~div.image>label:nth-child(7)::after {
+
+            position: absolute;
+            z-index: 20;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        div.image>label:hover::after {
+            background: rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
@@ -98,29 +278,233 @@
                     <span>注册 </span>
                 </a>
                 <span class="text-[rgb(60,60,60)]"> | </span>
-                
+
                 <a href="#">
                     <span> 消息通知 </span>
                 </a>
 
-                
+
             </div>
 
-            <div class="group text-[rgb(176,176,176)] inline-block  w-[118px] h-[40px] leading-[10px] right-0 absolute bg-[rgba(66,66,66,1)]">
-                <span class="group-hover:text-amber-500 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[70px] flex justify-center items-center">
+            <div
+                class="group text-[rgb(176,176,176)] inline-block  w-[118px] h-[40px] leading-[10px] right-0 absolute bg-[rgba(66,66,66,1)]">
+                <span
+                    class="group-hover:text-amber-500 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[70px] flex justify-center items-center">
                     <a href="" class="iconfont iconfont-cart"></a>
-                    <a href="#" >购物车</a>
+                    <a href="#">购物车</a>
                 </span>
-                <span class="transition-[height] duration-150 shadow-md overflow-hidden absolute h-0 group-hover:h-[100px] w-[317px] bg-white right-0 top-[100%] text-black flex justify-center items-center">
+                <span
+                    class="transition-[height] duration-150 shadow-md overflow-hidden absolute h-0 group-hover:h-[100px] w-[317px] bg-white right-0 top-[100%] text-black flex justify-center items-center">
                     <span class="">购物车中还没有商品，赶紧选购吧！</span>
                 </span>
             </div>
-            
+
+        </div>
+    </div>
+    <!-- flex 布局 -->
+    <div class="flex w-[1228px] m-auto justify-between h-[80px] items-center">
+        <div class="w-[240px]">图标</div>
+        <div class="flex w-[calc(1228px_-_240px)] justify-between items-center">
+            <div class="flex w-[776px] justify-between">
+                <span class="text-[16px]">Xiaomi手机</span>
+                <span class="text-[16px]">REDMI手机</span>
+                <span class="text-[16px]">电视</span>
+                <span class="text-[16px]">笔记本</span>
+                <span class="text-[16px]">平板</span>
+                <span class="text-[16px]">家电</span>
+                <span class="text-[16px]">路由器</span>
+                <span class="text-[16px]">服务中心</span>
+                <span class="text-[16px]">社区</span>
+            </div>
+
+            <div class="w-[150px] border-[1px]">
+                <input type="text" class="h-[40px]">
+            </div>
         </div>
     </div>
 
-    <div class="h-100 w-[1228px]">
+    <!------------------------------- 轮播图 -------------------------------------->
+    <div class="slider relative">
+        <input type="radio" name="slider" id="opt1" checked>
+        <input type="radio" name="slider" id="opt2">
+        <input type="radio" name="slider" id="opt3">
+        <input type="radio" name="slider" id="opt4">
+        <input type="radio" name="slider" id="opt5">
+        <input type="radio" name="slider" id="opt6">
 
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2e389157059c44d9352b42e04407cbb7.jpg?w=2452&h=920"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e47bc402508c005ec3c0f4c13bb8b705.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6807986a20a839b7b971274c705bbacf.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5d2e4ce0cc22c7d87981bac22d64e44d.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7f5a5fc15d61ee9f1f423f49f08e61d9.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/57b08b308c5eacf0655fd5da8d5a965f.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
+            alt="无">
+
+        <div class="image">
+            <label class="image" for="opt1"></label>
+            <label class="image" for="opt2"></label>
+            <label class="image" for="opt3"></label>
+            <label class="image" for="opt4"></label>
+            <label class="image" for="opt5"></label>
+            <label class="image" for="opt6"></label>
+
+            <label class="image" for="opt1"></label>
+            <label class="image" for="opt2"></label>
+            <label class="image" for="opt3"></label>
+            <label class="image" for="opt4"></label>
+            <label class="image" for="opt5"></label>
+            <label class="image" for="opt6"></label>
+        </div>
+
+        <div class="label-radio">
+            <label for="opt1"></label>
+            <label for="opt2"></label>
+            <label for="opt3"></label>
+            <label for="opt4"></label>
+            <label for="opt5"></label>
+            <label for="opt6"></label>
+
+        </div>
+
+        <div class="absolute w-[240px] h-[460px] z-1200 flex flex-col justify-center bg-black/20 text-white">
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">手机</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">电视</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">家电</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">笔记本 平板 显示器</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]"> 出现 穿戴</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">耳机 音响</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">健康 儿童</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">生活 箱包</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">智能 路由器</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+            <span class="h-[40px] w-full flex justify-between items-center mx-auto  hover:bg-orange-500 hover:w-full ">
+                <span class="ml-[20px]">电源 配件</span>
+                <span class="mr-[20px] icon-aw"></span>
+            </span>
+
+        </div>
+    </div>
+
+    <!-- ------------------------------------------ 格子 --------------------------------------------------------------------->
+    <div class="w-[1228px] flex justify-between mx-auto my-[10px]">
+        <div class="w-[240px] bg-black flex flex-warp h-[160px]">
+            <span class="w-[80px] h-[108px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png"
+                        alt="保障服务">
+                </a>
+            </span>
+            <span class="w-[80px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/806f2dfb2d27978e33fe3815d3851fa3.png"
+                        alt="企业团购">
+                </a>
+            </span>
+            <span class="w-[80px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/eded6fa3b897a058163e2485532c4f10.png"
+                        alt="F码通道">
+                </a>
+            </span>
+            <span class="w-[80px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/43a3195efa6a3cc7662efed8e7abe8bf.png"
+                        alt="米粉卡">
+                </a>
+            </span>
+            <span class="w-[80px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4846bca6010a0deb9f85464409862af.png"
+                        alt="以旧换新">
+                </a>
+            </span>
+            <span class="w-[80px]">
+                <a href="">
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9a76d7636b08e0988efb4fc384ae497b.png"
+                        alt="话费充值">
+                </a>
+            </span>
+
+
+        </div>
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&amp;h=340"
+            alt="" class="w-[320px] h-[160px]">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7404444f0c79b4bbb63e07724f502b86.png?w=632&amp;h=340"
+            alt="" class="w-[320px] h-[160px]">
+        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ce384835b97655abd1448f3e45eb48ff.png?w=632&amp;h=340"
+            alt="" class="w-[320px] h-[160px]">
+
+    </div>
+
+
+
+<!------------------------------------------------------------------------------------------ 这是第二部分 -------------------------------------------------------------------------->
+
+    <div id="partII" class="bg-gray-100 my-[60px] overflow-auto">
+        <div class="mx-auto w-[1228px] mt-[30px]">
+            <img alt="test" width="1226" height="120" src="D:\Ahomework\9e9c620dbad5c650b6ff0c573df76e14.webp"
+                lazy="loaded">
+        </div>
+
+        <div class="mx-auto w-[1228px] mt-[30px] flex justify-between">
+            <span class="text-[20px]">手机</span>
+            <span class="text-[16px]">
+                <span>查看更多</span>
+                <span> > </span>
+            </span>
+        </div>
+
+        <div class="mx-auto w-[1228px] mt-[16px] flex flex-col flex-wrap justify-between h-[530px]">
+            <span class="w-[240px] h-[530px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+            <span class="w-[240px] h-[260px] bg-black"></span>
+        </div>
     </div>
 </body>
 
