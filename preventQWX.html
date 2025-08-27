@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreventQWX</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    var field = document.querySelector("input");
+    field.addEventListener('keydown', event => {
+      if (event.key === 'Q' || event.key === 'W' || event.key === 'X') {
+        event.preventDefault();
+      }
+    })
+  </script>
+
+
+  </script>
+</body>
+
+</html>
