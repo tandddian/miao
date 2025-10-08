@@ -13,6 +13,13 @@
             font-weight: 400
         }
 
+        .iconfont-circle-arrow-right::before {
+            content: "\E615";
+            font-size: 48px;
+            width: 48px;
+            height: 48px;
+        }
+
         .iconfont {
             font-family: iconfont;
         }
@@ -427,7 +434,8 @@
 
     <!-- ------------------------------------------ 格子 --------------------------------------------------------------------->
     <div class="w-[1228px] flex justify-between mx-auto my-[10px]">
-        <div class="w-[240px] bg-black flex flex-warp h-[160px]">
+        <!-- 为什么图标的大小不变化? -->
+        <div class="w-[240px] bg-[rgb(95,87,80)] flex flex-warp h-[160px]">
             <span class="w-[80px] h-[108px]">
                 <a href="">
                     <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png"
@@ -464,9 +472,8 @@
                         alt="话费充值">
                 </a>
             </span>
-
-
         </div>
+
         <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&amp;h=340"
             alt="" class="w-[320px] h-[160px]">
         <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7404444f0c79b4bbb63e07724f502b86.png?w=632&amp;h=340"
@@ -477,35 +484,706 @@
     </div>
 
 
+    <!------------------------------------------------------------------------------------------ 这是第二部分 -------------------------------------------------------------------------->
 
-<!------------------------------------------------------------------------------------------ 这是第二部分 -------------------------------------------------------------------------->
-
-    <div id="partII" class="bg-gray-100 my-[60px] overflow-auto">
+    <div id="partII" class="bg-gray-100 my-[60px] overflow-hidden">
         <div class="mx-auto w-[1228px] mt-[30px]">
-            <img alt="test" width="1226" height="120" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e9c620dbad5c650b6ff0c573df76e14.jpg?thumb=1&w=1839&h=180&f=webp&q=90"
+            <img alt="test" width="1226" height="120"
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e9c620dbad5c650b6ff0c573df76e14.jpg?thumb=1&w=1839&h=180&f=webp&q=90"
                 lazy="loaded">
         </div>
 
-        <div class="mx-auto w-[1228px] mt-[30px] flex justify-between">
-            <span class="text-[20px]">手机</span>
-            <span class="text-[16px]">
-                <span>查看更多</span>
-                <span> > </span>
-            </span>
+        <div class="phone">
+            <div class="mx-auto w-[1228px] mt-[30px] flex justify-between">
+                <span class="text-[20px]">手机</span>
+                <span class="text-[16px] hover:text-[#ff6700] transition-all duration-150">
+                    <a>查看更多</a>
+                    <a> > </a>
+                </span>
+            </div>
+            <div class="mx-auto w-[1228px] mt-[16px] flex flex-col flex-wrap justify-between h-[628px] gap-[15px]">
+                <span
+                    class="w-[234px] h-[614px] hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <img alt=""
+                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=293&h=768&f=webp&q=90"
+                        class="w-[234px] h-[628px]">
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202509222138_488a3091be5bacbc236496b17f025f97.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191637_897738d7140afbfb03d411f222341d56.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202509232019_c599441b7cce5783aa10997a8a1489cc.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191716_047a1af684c7454573ea36b444046f39.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202509222149_7b96d9cb70aae8993cf6504a330f3f83.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506251658_d1ee9fc2e13ddad3cf6823ce4cbf45b5.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191153_f659bef05392c1bbcef77f4dd38f0277.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+                <span
+                    class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                    <div class="flex flex-col justify-between items-center">
+                        <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506181453_d97271f45499e132cbf0b597d5f7e04d.png?thumb=1&w=250&h=250&f=webp&q=90">
+                        <h3 class="title text-[14px]">
+                            Xiaomi 17 Pro Max
+                        </h3>
+                        <p
+                            class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                            徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                        <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                    </div>
+                </span>
+
+            </div>
         </div>
 
-        <div class="mx-auto w-[1228px] mt-[16px] flex flex-col flex-wrap justify-between h-[530px]">
-            <span class="w-[240px] h-[530px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
-            <span class="w-[240px] h-[260px] bg-black"></span>
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%---------这里是手机和智能穿戴------------%%%%%%%%%%%%% -->
+        <div class="earphones&watch ">
+            <div class="mx-auto w-[1228px] mt-[30px] flex justify-between">
+                <span class="text-[20px]">智能穿戴</span>
+
+                <span class="text-[16px] ">
+                    <label for="earphones"
+                        class="cursor-pointer transition-colors duration-150 border-b-[2px] border-transparent"
+                        id="ear">耳机</label>
+
+                    <label for="watch"
+                        class="cursor-pointer transition-colors duration-150 border-b-[2px] border-transparent"
+                        id="watchLabel">穿戴</label>
+                </span>
+            </div>
+
+            <div class="images relative mx-auto w-[1228px] mt-[16px] h-[630px] mt-[16px]">
+
+                <input type="radio" name="earphones&watch" id="earphones" class="peer/earphones hidden" checked>
+                <input type="radio" name="earphones&watch" id="watch" class="peer/watch  hidden">
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%-----这里是耳机-----%%%%%%%%%%%%%%%%%%%55 -->
+                <div class="mx-auto w-[1228px] mt-[16px] 
+                flex flex-col flex-wrap justify-between h-[628px] gap-[15px] 
+                absolute z-10  peer-checked/earphones:z-50">
+                    <span
+                        class="w-[234px] h-[614px] hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <img alt=""
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/15bd8044e1dbe5cdc05806ef3dc7bdf6.png?thumb=1&w=293&h=768&f=webp&q=90"
+                            class="w-[234px] h-[628px]">
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202509222149_7b96d9cb70aae8993cf6504a330f3f83.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506251658_d1ee9fc2e13ddad3cf6823ce4cbf45b5.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191153_f659bef05392c1bbcef77f4dd38f0277.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span class="w-[234px] h-[300px] flex flex-col flex-wrap flex-1 justify-between gap-[15px]">
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl  flex-1">
+                            <div class="flex justify-center  items-center">
+                                <div class="flex flex-col justify-evenly">
+                                    <h3 class="title text-[14px] w-[94px] h-[42px]">
+
+                                        Redmi Buds 6 活力版
+
+                                    </h3>
+
+                                    <p class="price"><span class="num text-[#ff6700] text-[14px]">99元</span> </p>
+                                </div>
+
+                                <img width="80" height="80" alt="Xiaomi 17 Pro Max"
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202405161349_af5d2bb2e50bf45ff23d766e49da6cc5.png?thumb=1&w=125&h=125&f=webp&q=90">
+
+                            </div>
+                        </span>
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+
+                            <div class="flex justify-evenly items-center ">
+                                <div class="flex flex-col items-left">
+                                    <h3 class="title text-[18px]">
+                                        浏览更多
+                                    </h3>
+
+                                    <p class="price"><span class="text-[14px] text-[#757575]">耳机</span> </p>
+                                </div>
+
+                                <div class="iconfont iconfont-circle-arrow-right text-[#ff6700]"></div>
+
+                            </div>
+                        </span>
+                    </span>
+
+
+                </div>
+
+                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%-----这里是手表-----%%%%%%%%%%%%%%%%%%%55 -->
+                <div class="mx-auto w-[1228px] mt-[16px] 
+                flex flex-col flex-wrap justify-between 
+                h-[628px] gap-[15px] absolute  z-0
+                peer-checked/watch:z-50">
+                    <span
+                        class="w-[234px] h-[614px] hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <img alt=""
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/15bd8044e1dbe5cdc05806ef3dc7bdf6.png?thumb=1&w=293&h=768&f=webp&q=90"
+                            class="w-[234px] h-[628px]">
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261228_d3694357fe29fdac9e23250e61a73972.png?thumb=1&w=200&h=200&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191153_f659bef05392c1bbcef77f4dd38f0277.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span class="w-[234px] h-[300px] flex flex-col flex-wrap flex-1 justify-between gap-[15px]">
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl  flex-1">
+                            <div class="flex justify-center  items-center">
+                                <div class="flex flex-col justify-evenly">
+                                    <h3 class="title text-[14px]">
+                                        Redmi 手环13
+                                    </h3>
+
+                                    <p class="price"><span class="num text-[#ff6700] text-[14px]">149元</span> </p>
+                                </div>
+
+                                <img width="80" height="80" alt="Xiaomi 17 Pro Max"
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202410241417_9ef2404939fdf794fda9cd16953dd28c.png?thumb=1&w=125&h=125&f=webp&q=90">
+
+                            </div>
+                        </span>
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+
+                            <div class="flex justify-evenly items-center ">
+                                <div class="flex flex-col items-left">
+                                    <h3 class="title text-[18px]">
+                                        浏览更多
+                                    </h3>
+
+                                    <p class="price"><span class="text-[14px] text-[#757575]">穿戴</span> </p>
+                                </div>
+
+                                <div class="iconfont iconfont-circle-arrow-right text-[#ff6700]"></div>
+
+                            </div>
+                        </span>
+                    </span>
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- ------------------------------这里是笔记本和平板电脑---------------------------- -->
+
+        <div class="laptop ">
+            <div class="mx-auto w-[1228px] mt-[30px] flex justify-between">
+                <span class="text-[20px]">笔记本 | 平板电脑</span>
+
+                <span class="text-[16px] ">
+                    <label 
+                        class="cursor-pointer border-b-[2px] text-[#ff6700] border-[#ff6700]">热门</label>
+                </span>
+            </div>
+
+            <div class="images relative mx-auto w-[1228px] mt-[16px] h-[630px] mt-[16px]">
+
+                <div class="mx-auto w-[1228px] mt-[16px] 
+                flex flex-col flex-wrap justify-between h-[628px] gap-[15px] 
+                absolute z-10  peer-checked/earphones:z-50">
+                    <span
+                        class="w-[234px] h-[614px] hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <img alt=""
+                            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8cff205062067eb3729db2d9c39e57f2.png?thumb=1&w=234&h=614&f=webp&q=90"
+                            class="w-[234px] h-[628px]">
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506261253_8ebd0e7d0f22fc4ff3d7a6baa2fe336a.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202509222149_7b96d9cb70aae8993cf6504a330f3f83.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202506251658_d1ee9fc2e13ddad3cf6823ce4cbf45b5.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span
+                        class="w-[234px] h-[300px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+                        <div class="flex flex-col justify-between items-center">
+                            <img width="160" height="160" alt="Xiaomi 17 Pro Max"
+                                src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202508191153_f659bef05392c1bbcef77f4dd38f0277.png?thumb=1&w=250&h=250&f=webp&q=90">
+                            <h3 class="title text-[14px]">
+                                Xiaomi 17 Pro Max
+                            </h3>
+                            <p
+                                class="text-xs text-ellipsis overflow-hidden whitespace-nowrap w-[214px] h-[18px] text-[#b0b0b0]">
+                                徕卡光影大师 移动影像系统｜徕卡 5X 超聚光潜望长焦</p>
+                            <p class="price"><span class="num text-[#ff6700] text-[14px]">5999元起</span> </p>
+                        </div>
+                    </span>
+
+                    <span class="w-[234px] h-[300px] flex flex-col flex-wrap flex-1 justify-between gap-[15px]">
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl  flex-1">
+                            <div class="flex justify-center  items-center">
+                                <div class="flex flex-col justify-evenly">
+                                    <h3 class="title text-[14px] w-[94px] h-[42px]">
+
+                                        Redmi Buds 6 活力版
+
+                                    </h3>
+
+                                    <p class="price"><span class="num text-[#ff6700] text-[14px]">99元</span> </p>
+                                </div>
+
+                                <img width="80" height="80" alt="Xiaomi 17 Pro Max"
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202405161349_af5d2bb2e50bf45ff23d766e49da6cc5.png?thumb=1&w=125&h=125&f=webp&q=90">
+
+                            </div>
+                        </span>
+
+                        <span
+                            class="w-[234px] h-[143px] bg-white flex flex-col justify-center hover:-translate-y-1 transition-all duration-250 hover:shadow-xl flex-1">
+
+                            <div class="flex justify-evenly items-center ">
+                                <div class="flex flex-col items-left">
+                                    <h3 class="title text-[18px]">
+                                        浏览更多
+                                    </h3>
+
+                                    <p class="price"><span class="text-[14px] text-[#757575]">耳机</span> </p>
+                                </div>
+
+                                <div class="iconfont iconfont-circle-arrow-right text-[#ff6700]"></div>
+
+                            </div>
+                        </span>
+                    </span>
+
+
+                </div>
+
+            </div>
+
         </div>
     </div>
+
+    <script>
+        const earphones = document.getElementById('earphones');
+        const watch = document.getElementById('watch');
+        const ear = document.getElementById('ear');
+        const watchLabel = document.getElementById('watchLabel');
+
+        if (earphones.checked) {
+                ear.style.color = '#ff6700';
+                ear.style.borderBottom = '2px solid #ff6700';
+                watchLabel.style.color = '';
+                watchLabel.style.borderBottom = '';
+            }
+
+        watchLabel.addEventListener('mouseenter', () => {
+            watch.checked = true;
+            watch.dispatchEvent(new Event('change')); // 🔥 手动触发（chatgpt）
+        })
+
+        ear.addEventListener('mouseenter', () => {
+            earphones.checked = true;
+            earphones.dispatchEvent(new Event('change')); // 🔥 手动触发（chatgpt）
+        })
+        earphones.addEventListener('change', () => {
+            if (earphones.checked) {
+                ear.style.color = '#ff6700';
+                ear.style.borderBottom = '2px solid #ff6700';
+                watchLabel.style.color = '';
+                watchLabel.style.borderBottom = '';
+            }
+        });
+
+        watch.addEventListener('change', () => {
+            if (watch.checked) {
+                watchLabel.style.color = '#ff6700';
+                watchLabel.style.borderBottom = '2px solid #ff6700';
+                ear.style.color = '';
+                ear.style.borderBottom = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
