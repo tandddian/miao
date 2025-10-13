@@ -4,13 +4,19 @@ const path = require("path");
 const port = 8000;
 const server = http.createServer();
 
-const baseDir = "d:/Ahomework";
+const baseDir = "d:/Ahomework/mi/";
 
 server.on("request", (req, res) => {
   let url = new URL(`http://127.0.0.1:${port}/${req.url}`);
   console.log(req.method, req.url);
 
   let targetPath = path.join(baseDir, decodeURIComponent(url.pathname));
+
+  if (!targetPath.startsWith(baseDir)) {
+    res.writeHead(400);
+    res.end();
+    return 
+  }
 
   fs.stat(targetPath, (err, stat) => {
     if (err) {
